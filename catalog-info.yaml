@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vm-on-aws3
+  description: The virtual machine for the staging
+  links:
+  - title: Pulumi Console
+    url: https://app.pulumi.com/backstage/vm-on-aws3/staging
+spec:
+  type: virtual-machine
+  owner: "group:default/platformengineering"
+  lifecycle: experimental
+  system: 
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vm-on-aws3
+  description: "aws"
+  annotations:
+    github.com/project-slug: damodarkumar/vm-on-awss
+    pulumi.com/project-slug: backstage/vm-on-aws3/staging
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/platformengineering"
+  system: 
+  dependsOn:
+  - resource:default/vm-on-aws3

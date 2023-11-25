@@ -1,0 +1,4 @@
+config:
+  aws:region: us-east-1
+  vm-on-aws3:instanceType: t3.medium
+  vm-on-aws3:vpcNetworkCidr: 10.0.0.0/16
